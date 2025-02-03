@@ -1,0 +1,117 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A69521B9-EB6D-A8CD-F47D-6C63D981672C" name="MANAGER">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<generatorID>8CF06081-0828-B6DD-0A24-50CE976E053F</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="manager_id" id="B0FB5417-4A20-33E9-FED8-E259A6945079">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique identifier of the manager.]]></commentInRDBMS>
+<generatorID>A0FDA60C-17EE-989A-E848-B631883269A7</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="manager_phone" id="8E1C901F-1780-5A85-BCB0-A03C73DCA919">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Phone number of the manager.]]></commentInRDBMS>
+<generatorID>72D14BAA-2980-2A6C-778F-8023B902206D</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="manager_fname" id="452FCD3D-54D3-EBC5-FDC7-F4A979D34C29">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[First name of the manager.]]></commentInRDBMS>
+<generatorID>27D65323-34FE-46C2-3BD4-01660D62902A</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="manager_lname" id="74C2F909-B2AF-B873-7AAF-47809B0DB212">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Last name of the manager.]]></commentInRDBMS>
+<generatorID>1895543B-920F-9B52-7CA9-9646F6DA4624</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="home_branch_code" id="28745FA0-D85E-3A3F-3556-30CC336F41B6">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique identifier of the LGA branch.]]></commentInRDBMS>
+<generatorID>FF63B939-5DCF-23BB-0E95-BD3163E52974</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C7DB1BFB-C479-B5CE-405B-7C16925DDB7E" referredColumn="13E4B39C-4A5F-2073-B83E-68ED1DD21B53"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A2B8C689-1F79-A4FE-DBA9-093467EDA351" name="MANAGER_PK">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<generatorID>B50E56F7-87A9-896C-958D-9976A262697E</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B0FB5417-4A20-33E9-FED8-E259A6945079"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E2774F21-9F03-A184-6E38-F36D40F4138A" name="MANAGER__IDX">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>D94D1D45-956A-89C9-1ADB-CAB6328750B1</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="28745FA0-D85E-3A3F-3556-30CC336F41B6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="09CC1A07-98DC-58ED-FDDF-0635BE1344AE" name="Relation_17">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<generatorID>D94D1D45-956A-89C9-1ADB-CAB6328750B1</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="28745FA0-D85E-3A3F-3556-30CC336F41B6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

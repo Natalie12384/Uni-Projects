@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="bookcopy_loan_fk" directorySegmentName="seg_0" id="D110615B-4877-013B-05D5-EB5DE34B921F">
+<createdBy>ryanhicks</createdBy>
+<createdTime>2024-09-15 05:30:55 UTC</createdTime>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<engineerTo>
+<item key="BB23BA73-977C-D9F9-7ADA-38DD3C34C9EB" value="true"/>
+</engineerTo>
+<sourcePk>7664B889-4B60-2EE4-CFE2-C8795C39F564</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>assigned</nameOnSource>
+<nameOnTarget> </nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>60DB7F4A-9E6C-95B6-AE54-406B915C25C8</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>1D84A5DE-076E-EF8A-F46E-7C382FDA4B8D</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

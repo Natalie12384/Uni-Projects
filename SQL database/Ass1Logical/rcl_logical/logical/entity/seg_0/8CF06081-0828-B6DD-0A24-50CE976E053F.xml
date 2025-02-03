@@ -1,0 +1,106 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8CF06081-0828-B6DD-0A24-50CE976E053F" name="MANAGER">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-14 00:54:40 UTC</createdTime>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<engineerTo>
+<item key="BB23BA73-977C-D9F9-7ADA-38DD3C34C9EB" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="manager_id" id="A0FDA60C-17EE-989A-E848-B631883269A7">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-14 08:29:47 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique identifier of the manager.]]></commentInRDBMS>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<engineerTo>
+<item key="BB23BA73-977C-D9F9-7ADA-38DD3C34C9EB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="manager_phone" id="72D14BAA-2980-2A6C-778F-8023B902206D">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-14 08:29:47 UTC</createdTime>
+<commentInRDBMS><![CDATA[Phone number of the manager.]]></commentInRDBMS>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<engineerTo>
+<item key="BB23BA73-977C-D9F9-7ADA-38DD3C34C9EB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="manager_fname" id="27D65323-34FE-46C2-3BD4-01660D62902A">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-14 08:29:47 UTC</createdTime>
+<commentInRDBMS><![CDATA[First name of the manager.]]></commentInRDBMS>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<engineerTo>
+<item key="BB23BA73-977C-D9F9-7ADA-38DD3C34C9EB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="manager_lname" id="1895543B-920F-9B52-7CA9-9646F6DA4624">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-14 08:30:55 UTC</createdTime>
+<commentInRDBMS><![CDATA[Last name of the manager.]]></commentInRDBMS>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<engineerTo>
+<item key="BB23BA73-977C-D9F9-7ADA-38DD3C34C9EB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="home_branch_code" id="FF63B939-5DCF-23BB-0E95-BD3163E52974">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-17 03:15:45 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique identifier of the LGA branch.]]></commentInRDBMS>
+<generatorID>D94D1D45-956A-89C9-1ADB-CAB6328750B1</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<engineerTo>
+<item key="BB23BA73-977C-D9F9-7ADA-38DD3C34C9EB" value="true"/>
+</engineerTo>
+<referedAttribute>4D7E180A-353E-0448-4F99-6CD0E7BDEDEB</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B50E56F7-87A9-896C-958D-9976A262697E" name="MANAGER PK">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-14 08:29:52 UTC</createdTime>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="BB23BA73-977C-D9F9-7ADA-38DD3C34C9EB" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>A0FDA60C-17EE-989A-E848-B631883269A7</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

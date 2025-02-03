@@ -1,0 +1,211 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="05F26982-ECC5-2E24-0369-6E04E32E9A86" name="CATALOGUE">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<generatorID>0303E369-FA12-D83C-9D4B-D7E0D038BEF4</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cat_call_no" id="ED6883C5-2AAF-30C6-6BC6-923BB565F11F">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Call number of the catalogue that contains Dewey Decimal Classification.]]></commentInRDBMS>
+<generatorID>EA5E48BD-1C24-D97F-3962-F1FC16AA36A9</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cat_title" id="A8EA0C46-57B6-C68C-A780-20D607CD6E19">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Title of the catalogue.]]></commentInRDBMS>
+<generatorID>F532C24D-D5D8-A0A1-63FB-64E679C915A0</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cat_content" id="EC21E2AF-B6CC-0C4F-4B24-2FA423F795C9">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Description of books related in the catalogue.]]></commentInRDBMS>
+<generatorID>6BE77A91-1E6B-8E9C-4AF6-6E10BDD72D3C</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000</dataTypeSize>
+<ownDataTypeParameters>1000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cat_classification" id="8E6256CC-D4DF-4D30-A99D-63C14BD6AED9">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Classify catalogue as Reference or Fiction.]]></commentInRDBMS>
+<generatorID>8D803EEC-74CF-FEB5-B391-6B44B40C15ED</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<listOfValues>
+<valueDef value="F" description="Fiction"/>
+<valueDef value="R" description="Reference"/>
+</listOfValues>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cat_no_pages" id="0CA3731D-2EAC-6924-827F-0171A059A3DF">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Total number of pages in the catalogue.]]></commentInRDBMS>
+<generatorID>E8A60CF2-51D0-2F9E-B9FF-ABDA8C5F45B5</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cat_reading_level" id="A4FD8969-E0CD-2D6A-816A-6EBBBEE51201">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Reading difficulty level from (1) Easy to (30) Very Difficult.]]></commentInRDBMS>
+<generatorID>89ADB23D-2FB7-ABB5-171C-1AD1BF1A9C21</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<constraintName>reading_difficulty_level</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>1</beginValue>
+<endValue>30</endValue>
+<description>(1) Easy to (30) Very Difficult</description>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="cat_publication_year" id="34F65E72-2732-DD2E-CEE5-D348B9CCBA13">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[The year the book in the catalogue was published.]]></commentInRDBMS>
+<generatorID>73465980-E873-F6E7-E54A-5BD48650F77B</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="publisher_id" id="69499723-22B9-120F-A06C-0A07D9F58AD1">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique identifier of the publisher.]]></commentInRDBMS>
+<generatorID>1A162B75-1E12-0ABD-2ACB-6EFD6D7A5D0C</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C6F70218-E24B-6B55-E216-7B81737CA118" referredColumn="48E0DB4D-5B58-78CB-5192-07F5737005A7"/>
+</associations>
+</Column>
+<Column name="cat_lang" id="D2732DA7-9F5F-AC23-E42B-CC57F5DBC9FD">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Language that is used by the book in the catalogue.]]></commentInRDBMS>
+<generatorID>8BA5121D-F389-F698-BD28-CEBF4C19EF17</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+<ownDataTypeParameters>2,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cat_description" id="D378DD82-80CD-0FBB-FBDF-53710D883641">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Description of the catalogue.]]></commentInRDBMS>
+<generatorID>E26D10DA-53ED-5621-88B5-D42BBC59D5E9</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cat_edition" id="54B8B34A-FCEB-B234-B929-8BA933FEDF8F">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Edition of the catalogue.]]></commentInRDBMS>
+<generatorID>B33E86A2-CA05-3FF0-B597-9335B9C1A230</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cat_note" id="5370ED81-6C8E-51FA-B17D-4792313ADEF7">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Additional note for the catalogue.]]></commentInRDBMS>
+<generatorID>7325EA98-6DF5-B5F4-1DEA-0A3EC57DD07A</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6712B6FE-4098-ED8E-7ABA-7DED3261A0B2" name="CATALOGUE_PK">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<generatorID>79E9A696-CA97-C03F-0613-7378C4E65F7F</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ED6883C5-2AAF-30C6-6BC6-923BB565F11F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="898D6254-3FEF-8EA3-4E1B-C54A5935EA46" name="publisher_catalogue_fk">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<generatorID>7404EDA6-B5DC-FD33-9B13-440C8426FEC6</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="69499723-22B9-120F-A06C-0A07D9F58AD1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

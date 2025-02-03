@@ -1,0 +1,134 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2A6E2CF8-DBE9-C117-C845-960170B93E81" name="AGENCY_BRANCH">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<generatorID>0D10C33E-8F16-3D6C-DF18-AB68D391868A</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="branch_code" id="13E4B39C-4A5F-2073-B83E-68ED1DD21B53">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique identifier of the LGA branch.]]></commentInRDBMS>
+<generatorID>4D7E180A-353E-0448-4F99-6CD0E7BDEDEB</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="branch_name" id="32E8FDF9-745C-E229-621E-F8082F3AF4AE">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Name of the LGA branch.]]></commentInRDBMS>
+<generatorID>A33DD93F-4FE5-248D-DA79-6A8724BA314F</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="branch_address" id="7390B9BB-F91F-CEDB-E4AA-92650776ECC0">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Address of the LGA branch.]]></commentInRDBMS>
+<generatorID>C051124B-FFD2-2B3B-436D-7C18C2DB5E53</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="branch_phone" id="B0641FC4-4BDF-E54D-46F5-08B83E9CAE3E">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Main service phone number of the LGA branch.]]></commentInRDBMS>
+<generatorID>8D8DD356-D2AC-2923-A6D3-8A218B07FE7F</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="lga_code" id="613067DC-ADC9-7574-2508-D9DF4F5DAFC4">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique identifier of the Local Government Agency.]]></commentInRDBMS>
+<generatorID>AAC9542B-DB82-DD5F-26F8-A3D56952789E</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="997EA8CD-C1E9-3622-DE49-D44AF9F1EB97" referredColumn="EA211519-222F-7D48-1135-E125F0B26433"/>
+</associations>
+</Column>
+<Column name="manager_id" id="C325F8DC-2910-D0E1-7FD2-EA62FBCBA8DB">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique identifier of the manager.]]></commentInRDBMS>
+<generatorID>FD86ABB4-7C80-D46A-A1C3-E8D5D3A11263</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1F653AC5-ED04-955C-D417-DC1AA5CFAC31" referredColumn="B0FB5417-4A20-33E9-FED8-E259A6945079"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3E8C550B-0A89-B119-C4EA-8CC080702637" name="AGENCY_BRANCH_PK">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<generatorID>94DDDCA2-919A-6B1D-45CE-8D7D99CBA1B2</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="13E4B39C-4A5F-2073-B83E-68ED1DD21B53"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B8086456-88D1-FB34-B08A-F467EE0D36B4" name="lga_agencybranch_fk">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<generatorID>B1FB9779-84EE-07FD-6616-BD7E0BEAEDA7</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="613067DC-ADC9-7574-2508-D9DF4F5DAFC4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FCB3337D-37A2-A73C-9D52-63C543764BDC" name="manager_agencybranch_fk">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<generatorID>45B682C3-7EF4-2E6C-7C9D-2A7C22FBF4FD</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C325F8DC-2910-D0E1-7FD2-EA62FBCBA8DB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

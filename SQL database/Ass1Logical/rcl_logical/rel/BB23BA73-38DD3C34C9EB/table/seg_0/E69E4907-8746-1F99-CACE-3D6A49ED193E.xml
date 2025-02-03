@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E69E4907-8746-1F99-CACE-3D6A49ED193E" name="CATALOGUE_AUTHOR">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<generatorID>EA72D21E-9F15-2966-9458-19C86B3B11AD</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cat_call_no" id="437693F4-FB5A-21AD-D032-1D6986BC3B82">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Call number of the catalogue that contains Dewey Decimal Classification.]]></commentInRDBMS>
+<generatorID>E82C2707-FE76-AD2C-8039-F89CCC354FCC</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B2F15898-791C-FE07-902A-E9F00FCD6838" referredColumn="ED6883C5-2AAF-30C6-6BC6-923BB565F11F"/>
+</associations>
+</Column>
+<Column name="author_id" id="F75B0BDB-BF05-ADF2-B5EF-38DE995FEA26">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique identifier of the author.]]></commentInRDBMS>
+<generatorID>9DA4E456-93EB-5B8A-7D0F-006CF2EAFB65</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6CE8E39C-DDFB-B4AC-7EF9-DC3E2C7E527E" referredColumn="678C607E-80FC-C705-81BE-D24BD04380AD"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2DC9DF65-ACF7-D8F7-044D-419D5326B803" name="CATALOGUE_AUTHOR_PK">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<generatorID>83E5FD78-76B7-AC1D-18AB-50E5719ACFCB</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="437693F4-FB5A-21AD-D032-1D6986BC3B82"/>
+<colUsage columnID="F75B0BDB-BF05-ADF2-B5EF-38DE995FEA26"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6392AD7E-0A5F-23EF-421B-D11923068626" name="author_a_catalogue_pk">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<generatorID>22EA397C-DE3B-9FB3-D68C-87A40BC5E35F</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F75B0BDB-BF05-ADF2-B5EF-38DE995FEA26"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8D90B9D5-38F3-A056-F8C2-B6D214EC51ED" name="catalogue_author_relation">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<generatorID>B5B8ED90-F554-7BA8-E109-5FB28D542065</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="437693F4-FB5A-21AD-D032-1D6986BC3B82"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

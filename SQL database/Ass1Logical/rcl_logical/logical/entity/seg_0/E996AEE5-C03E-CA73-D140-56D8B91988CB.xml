@@ -1,0 +1,67 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E996AEE5-C03E-CA73-D140-56D8B91988CB" name="ISBN">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-14 11:54:12 UTC</createdTime>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<engineerTo>
+<item key="BB23BA73-977C-D9F9-7ADA-38DD3C34C9EB" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="isbn_no" id="E3CEFA12-1BB6-8A9E-3D16-6A3645AD5372">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-14 11:54:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique ISBN number.]]></commentInRDBMS>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<engineerTo>
+<item key="BB23BA73-977C-D9F9-7ADA-38DD3C34C9EB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>13</dataTypePrecision>
+<ownDataTypeParameters>,13,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="isbn_type" id="7AD2F1FE-C256-6694-F4FE-9AD09BFF82EA">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-14 11:55:07 UTC</createdTime>
+<commentInRDBMS><![CDATA[Type of book relating to the ISBN.]]></commentInRDBMS>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<engineerTo>
+<item key="BB23BA73-977C-D9F9-7ADA-38DD3C34C9EB" value="true"/>
+</engineerTo>
+<constraintName>isbn_type</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<listOfValues>
+<valueDef value="H" description="Hardback"/>
+<valueDef value="P" description="Paperback"/>
+</listOfValues>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="060A8EF4-9801-CA39-D4CD-D4C73C2D56A0" name="ISBN PK">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-14 11:55:06 UTC</createdTime>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="BB23BA73-977C-D9F9-7ADA-38DD3C34C9EB" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>E3CEFA12-1BB6-8A9E-3D16-6A3645AD5372</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

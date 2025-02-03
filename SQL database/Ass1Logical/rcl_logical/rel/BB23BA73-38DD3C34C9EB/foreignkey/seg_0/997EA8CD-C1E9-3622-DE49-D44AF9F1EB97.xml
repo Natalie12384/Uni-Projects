@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="997EA8CD-C1E9-3622-DE49-D44AF9F1EB97" containerWithKeyObject="2A6E2CF8-DBE9-C117-C845-960170B93E81" localFKIndex="B8086456-88D1-FB34-B08A-F467EE0D36B4" name="lga_agencybranch_fk">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<generatorID>B1FB9779-84EE-07FD-6616-BD7E0BEAEDA7</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<referredTableLongName>LOCAL_GOVERNMENT_AGENCY</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>0A323B99-2319-D739-950D-F37CF6960455</referredTableID>
+<keyObject>36823737-1381-2819-4D79-B4F157F7E42A</keyObject>
+<referredKeyID>36823737-1381-2819-4D79-B4F157F7E42A</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>lga_code</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

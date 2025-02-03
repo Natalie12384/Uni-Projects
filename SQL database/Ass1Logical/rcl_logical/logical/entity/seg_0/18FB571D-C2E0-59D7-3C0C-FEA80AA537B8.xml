@@ -1,0 +1,96 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="18FB571D-C2E0-59D7-3C0C-FEA80AA537B8" name="RESERVE">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-16 01:58:43 UTC</createdTime>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<engineerTo>
+<item key="BB23BA73-977C-D9F9-7ADA-38DD3C34C9EB" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="reserve_datetime" id="5C3A1D8A-2DBF-E184-A359-88C45B11ECC4">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-16 01:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Date and time when borrower reserves book.]]></commentInRDBMS>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<engineerTo>
+<item key="BB23BA73-977C-D9F9-7ADA-38DD3C34C9EB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="reserve_phone" id="B653228F-F9EF-A0CA-E322-9E8D9EAB0CA9">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-16 01:59:52 UTC</createdTime>
+<commentInRDBMS><![CDATA[Phone number of the borrower.]]></commentInRDBMS>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<engineerTo>
+<item key="BB23BA73-977C-D9F9-7ADA-38DD3C34C9EB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="book_copy_id" id="CEC0DEF1-5D25-DE98-A317-DA2DF1B81AC5">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-16 02:01:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique identifier of a book copy in a branch.]]></commentInRDBMS>
+<generatorID>C63A9767-7B93-DFC5-A40C-82DF9053821A</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<engineerTo>
+<item key="BB23BA73-977C-D9F9-7ADA-38DD3C34C9EB" value="true"/>
+</engineerTo>
+<referedAttribute>5CF44D04-4A8F-A225-0D2F-AEF80A1EA50B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="branch_code" id="49B18547-8D57-2FB5-82F1-75BA00B2269C">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-17 03:44:33 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique identifier of the LGA branch.]]></commentInRDBMS>
+<generatorID>C63A9767-7B93-DFC5-A40C-82DF9053821A</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<engineerTo>
+<item key="BB23BA73-977C-D9F9-7ADA-38DD3C34C9EB" value="true"/>
+</engineerTo>
+<referedAttribute>16F0DD81-0E80-3D0C-EB1C-B93D7F95F481</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="5C308DD0-3AF0-2AA9-BE64-4473F03B939A" name="RESERVE PK">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-16 01:59:47 UTC</createdTime>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="BB23BA73-977C-D9F9-7ADA-38DD3C34C9EB" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<newElementsIDs>C63A9767-7B93-DFC5-A40C-82DF9053821A,5C3A1D8A-2DBF-E184-A359-88C45B11ECC4</newElementsIDs>
+<usedAttributes>
+<attributeRef>CEC0DEF1-5D25-DE98-A317-DA2DF1B81AC5</attributeRef>
+<attributeRef>49B18547-8D57-2FB5-82F1-75BA00B2269C</attributeRef>
+<attributeRef>5C3A1D8A-2DBF-E184-A359-88C45B11ECC4</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

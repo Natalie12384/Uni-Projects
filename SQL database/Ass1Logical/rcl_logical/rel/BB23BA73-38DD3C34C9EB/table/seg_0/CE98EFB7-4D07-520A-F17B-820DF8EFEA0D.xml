@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CE98EFB7-4D07-520A-F17B-820DF8EFEA0D" name="RESERVE">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<generatorID>18FB571D-C2E0-59D7-3C0C-FEA80AA537B8</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="reserve_datetime" id="BD9E4A4E-808D-3B57-1BB5-074F654C7A31">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Date and time when borrower reserves book.]]></commentInRDBMS>
+<generatorID>5C3A1D8A-2DBF-E184-A359-88C45B11ECC4</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="reserve_phone" id="68479A9C-ED5C-965A-F381-E2182B5F6003">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Phone number of the borrower.]]></commentInRDBMS>
+<generatorID>B653228F-F9EF-A0CA-E322-9E8D9EAB0CA9</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="book_copy_id" id="CA9CEB17-B6FD-62FF-BB1C-29BBDD8139AF">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique identifier of a book copy in a branch.]]></commentInRDBMS>
+<generatorID>CEC0DEF1-5D25-DE98-A317-DA2DF1B81AC5</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0CE6C7CA-4FFC-9723-C160-80F7653A7604" referredColumn="54B286F1-5405-51B9-B066-1E6FD7A123CC"/>
+</associations>
+</Column>
+<Column name="branch_code" id="3F8B1104-26BE-1AEC-B755-C331D50DCF38">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique identifier of the LGA branch.]]></commentInRDBMS>
+<generatorID>49B18547-8D57-2FB5-82F1-75BA00B2269C</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0CE6C7CA-4FFC-9723-C160-80F7653A7604" referredColumn="166EACA0-2ED7-6C80-C367-51BE4DD91F03"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="410B3B84-8A13-8CBA-1262-D8132D95297E" name="RESERVE_PK">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<generatorID>5C308DD0-3AF0-2AA9-BE64-4473F03B939A</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CA9CEB17-B6FD-62FF-BB1C-29BBDD8139AF"/>
+<colUsage columnID="3F8B1104-26BE-1AEC-B755-C331D50DCF38"/>
+<colUsage columnID="BD9E4A4E-808D-3B57-1BB5-074F654C7A31"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9218FF37-D8BB-B2C9-9BA8-69822E25057F" name="reserve_book_copy_pk">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<generatorID>C63A9767-7B93-DFC5-A40C-82DF9053821A</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CA9CEB17-B6FD-62FF-BB1C-29BBDD8139AF"/>
+<colUsage columnID="3F8B1104-26BE-1AEC-B755-C331D50DCF38"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

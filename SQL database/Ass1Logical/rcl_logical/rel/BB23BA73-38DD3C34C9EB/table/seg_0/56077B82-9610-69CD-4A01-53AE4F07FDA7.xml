@@ -1,0 +1,191 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="56077B82-9610-69CD-4A01-53AE4F07FDA7" name="LOAN">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<generatorID>1D84A5DE-076E-EF8A-F46E-7C382FDA4B8D</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="loan_id" id="2DDB737E-EB0A-D564-492C-B055E6A4F720">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Loan identifier (surrogate key).]]></commentInRDBMS>
+<generatorID>EA01A6FA-C108-951D-3992-D2D5867038F6</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="loan_borrow_datetime" id="A325DC2F-FCA1-C590-01AD-D83B901C7ADA">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Date and time of when book was loaned out.]]></commentInRDBMS>
+<generatorID>7EF75210-CB25-16E1-DFE1-4BE5EB78B21D</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="loan_return_datetime" id="77D67326-C2E1-94AE-4141-F9DE1175E26E">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[The date and time when the book is returned from being loaned out.]]></commentInRDBMS>
+<generatorID>108E4ADF-8F3D-1641-6829-14DAFB6943A9</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="borrower_no" id="16282F30-8FC4-35A0-74C5-D18593F12453">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique identifier of the borrower.]]></commentInRDBMS>
+<generatorID>46849986-32E9-B887-BBFC-95CA4B893770</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="63874F7A-BF03-3B13-9799-10488D8E2998" referredColumn="83C2976B-601F-280F-300D-5B8F02991337"/>
+</associations>
+</Column>
+<Column name="book_copy_id" id="0F47C9E3-51B2-D885-A2BC-22F240FCAF4C">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique identifier of a book copy in a branch.]]></commentInRDBMS>
+<generatorID>B289CEE6-8847-6F7B-DA61-2C0F09DED1C1</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="08982A21-A683-38A8-0D80-E5920431A8F7" referredColumn="54B286F1-5405-51B9-B066-1E6FD7A123CC"/>
+</associations>
+</Column>
+<Column name="loan_due_back_date" id="B681F1E4-D74A-F1C5-6126-C8137F6FB211">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Planned loan return date.]]></commentInRDBMS>
+<generatorID>3194DF67-4CED-73C9-4FFB-1D892D8DEA14</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="branch_code" id="AFBE2A11-B1BF-28A3-7B5B-1124CC8D96E7">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique identifier of the LGA branch.]]></commentInRDBMS>
+<generatorID>0717E2D6-7DA4-90D1-3714-0F9D7848F067</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="08982A21-A683-38A8-0D80-E5920431A8F7" referredColumn="166EACA0-2ED7-6C80-C367-51BE4DD91F03"/>
+</associations>
+</Column>
+<Column name="loan_fine_amnt" id="988B189D-8517-E9EB-5FBD-A42178E05EB9">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Amount to fine borrower for a late book loan return.]]></commentInRDBMS>
+<generatorID>E4AC7CAC-66C6-B691-A328-BA9DE50011DC</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,4,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="loan_fine_paid_date" id="BD1DD4B7-6EC5-CD3C-97D7-9E7F1953A834">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[The date borrower paid the late return fine.]]></commentInRDBMS>
+<generatorID>06069BDC-B4C1-A32B-824F-27F5D4E05067</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F709F04E-F1A7-9EBF-9A44-DA8F7FDA283B" name="LOAN_PK">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<generatorID>4916112A-53B1-A044-FCD9-1F0E5B62C85F</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2DDB737E-EB0A-D564-492C-B055E6A4F720"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A777B34B-27A5-AF8F-CD15-05F3E1272A15" name="LOAN_UQ">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<generatorID>04584A08-DC77-39FA-965E-C14C90BB51FA</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A325DC2F-FCA1-C590-01AD-D83B901C7ADA"/>
+<colUsage columnID="16282F30-8FC4-35A0-74C5-D18593F12453"/>
+<colUsage columnID="0F47C9E3-51B2-D885-A2BC-22F240FCAF4C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A36E3A68-B8CC-286F-42E8-045A0E35CF75" name="bookcopy_loan_fk">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<generatorID>D110615B-4877-013B-05D5-EB5DE34B921F</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0F47C9E3-51B2-D885-A2BC-22F240FCAF4C"/>
+<colUsage columnID="AFBE2A11-B1BF-28A3-7B5B-1124CC8D96E7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FE3FFF6E-7D7D-C1B9-5175-4B4210CEA670" name="borrower_loan_fk">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<generatorID>CC40EA22-25E8-E63F-A7BA-EA5F8A7C6D56</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="16282F30-8FC4-35A0-74C5-D18593F12453"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

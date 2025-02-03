@@ -1,0 +1,178 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9767CA42-2BFA-80B6-ABA3-D2B11E83B805" name="BOOK_COPY">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<generatorID>60DB7F4A-9E6C-95B6-AE54-406B915C25C8</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="book_copy_id" id="54B286F1-5405-51B9-B066-1E6FD7A123CC">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique identifier of a book copy in a branch.]]></commentInRDBMS>
+<generatorID>5CF44D04-4A8F-A225-0D2F-AEF80A1EA50B</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="book_purchase_price" id="90786710-5BB9-4205-AFA9-940674485EA9">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Price of the book.]]></commentInRDBMS>
+<generatorID>9075C00A-A558-060C-0B62-6F9056AB10E6</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,4,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="book_counter_reserve_flag" id="9F54A8BC-677D-60BF-0794-F5737586F4D2">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Indicator if the book is currently reserved.]]></commentInRDBMS>
+<generatorID>FF65E60D-BAF8-FCEB-39A2-C260807BC29E</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<constraintName>Reserve_flag</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<listOfValues>
+<valueDef value="N" description="No"/>
+<valueDef value="Y" description="Yes"/>
+</listOfValues>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cat_call_no" id="E9B1F084-0B76-2415-1ED2-129C65C3283C">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Call number of the catalogue that contains Dewey Decimal Classification.]]></commentInRDBMS>
+<generatorID>5F25804D-3567-2886-28FD-2EB5B364FD4A</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8C4A28CD-BBE1-CFD1-A40F-5D3BCAF7F1C6" referredColumn="ED6883C5-2AAF-30C6-6BC6-923BB565F11F"/>
+</associations>
+</Column>
+<Column name="branch_code" id="166EACA0-2ED7-6C80-C367-51BE4DD91F03">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique identifier of the LGA branch.]]></commentInRDBMS>
+<generatorID>16F0DD81-0E80-3D0C-EB1C-B93D7F95F481</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6E665E92-933A-B5EC-BD8F-0D03836D94DC" referredColumn="13E4B39C-4A5F-2073-B83E-68ED1DD21B53"/>
+</associations>
+</Column>
+<Column name="book_loan_status" id="3F9EEC19-3BEB-0523-7EDF-D3981314F59E">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Loan status of the book copy.]]></commentInRDBMS>
+<generatorID>AFDCF59B-D4D8-433A-D8A6-51405C4E9398</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<constraintName>book_loan_status</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<listOfValues>
+<valueDef value="A" description="Available for borrowing"/>
+<valueDef value="L" description="On loan"/>
+<valueDef value="R" description="On counter reserve"/>
+</listOfValues>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="book_condition" id="623B0F27-B409-86C4-C611-C7C3D7578D08">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Condition of the book copy.]]></commentInRDBMS>
+<generatorID>9EC2BCFE-BEA8-99A0-E0F5-0DFB555E8EB1</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<constraintName>book_condition</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<listOfValues>
+<valueDef value="D" description="Damage"/>
+<valueDef value="L" description="Lost"/>
+<valueDef value="S" description="Stolen"/>
+</listOfValues>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0CDB8CD4-BEF3-B245-B9F8-D4F4968F510D" name="BOOK_COPY_PK">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<generatorID>7664B889-4B60-2EE4-CFE2-C8795C39F564</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="54B286F1-5405-51B9-B066-1E6FD7A123CC"/>
+<colUsage columnID="166EACA0-2ED7-6C80-C367-51BE4DD91F03"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="51961432-A767-C66D-E38C-BC5FD7A829BE" name="BOOK_COPY__IDX">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>D22B80AC-477D-C64E-DB32-847365D01042</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="166EACA0-2ED7-6C80-C367-51BE4DD91F03"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2DB47EA0-58FF-F2F1-EB67-97A1E528AAAC" name="branch_book_fk">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<generatorID>D22B80AC-477D-C64E-DB32-847365D01042</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="166EACA0-2ED7-6C80-C367-51BE4DD91F03"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2E6EBE05-ACB9-F2EF-7EF8-EADEA75EACAA" name="catalogue_bookcopy_fk">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<generatorID>E315A54E-60BA-9A08-6C05-7116841B8014</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E9B1F084-0B76-2415-1ED2-129C65C3283C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

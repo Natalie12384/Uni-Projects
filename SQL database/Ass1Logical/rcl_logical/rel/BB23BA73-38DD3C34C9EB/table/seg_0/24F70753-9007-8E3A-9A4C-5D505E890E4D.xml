@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="24F70753-9007-8E3A-9A4C-5D505E890E4D" name="CATALOGUE_ISBN">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<generatorID>D6483C97-ABCA-3F00-AE8F-5A7777C7C332</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cat_call_no" id="C5B901A8-10FD-1074-BCEE-1EF916F13247">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Call number of the catalogue that contains Dewey Decimal Classification.]]></commentInRDBMS>
+<generatorID>3CC10D2C-9C04-A6F5-BAC4-322B1F61D399</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="759C73BC-9A33-696F-1122-D8FE19A2761E" referredColumn="ED6883C5-2AAF-30C6-6BC6-923BB565F11F"/>
+</associations>
+</Column>
+<Column name="isbn_no" id="17FA5990-7AE8-4B20-877C-3B4C4CE5705F">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique ISBN number.]]></commentInRDBMS>
+<generatorID>4F51D239-A6FA-DCBA-5215-AA72B1C7A12E</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>13</dataTypePrecision>
+<ownDataTypeParameters>,13,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2888FD57-B5F0-8313-9447-B7B3D2A17247" referredColumn="41FAB887-F40E-0700-5FBD-799EA3884717"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="48D8B3D2-45A0-D269-B3A5-D99C2E375179" name="CATALOGUE_AUTHOR_PKv2">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<generatorID>73D9ECA9-931F-787B-F44B-EEA5FE40CD41</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C5B901A8-10FD-1074-BCEE-1EF916F13247"/>
+<colUsage columnID="17FA5990-7AE8-4B20-877C-3B4C4CE5705F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1E084B54-66B2-015B-5E2E-566E734FCD9A" name="cat_catalogue_isbn">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<generatorID>795E3B1D-90EB-4AA5-16D0-D0A3620D982F</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C5B901A8-10FD-1074-BCEE-1EF916F13247"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="35B8275C-246A-3D7A-7ECD-9790333DEFB0" name="isbn_catalogue_isbn_pk">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-18 00:34:15 UTC</createdTime>
+<generatorID>CB005692-D962-39E4-6E33-5458D595AA1D</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="17FA5990-7AE8-4B20-877C-3B4C4CE5705F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

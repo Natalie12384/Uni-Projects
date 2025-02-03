@@ -1,0 +1,181 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="1D84A5DE-076E-EF8A-F46E-7C382FDA4B8D" name="LOAN">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-14 00:56:00 UTC</createdTime>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<engineerTo>
+<item key="BB23BA73-977C-D9F9-7ADA-38DD3C34C9EB" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="loan_id" id="EA01A6FA-C108-951D-3992-D2D5867038F6">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-17 07:46:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[Loan identifier (surrogate key).]]></commentInRDBMS>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<engineerTo>
+<item key="BB23BA73-977C-D9F9-7ADA-38DD3C34C9EB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="loan_borrow_datetime" id="7EF75210-CB25-16E1-DFE1-4BE5EB78B21D">
+<createdBy>ryanhicks</createdBy>
+<createdTime>2024-09-15 04:49:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[Date and time of when book was loaned out.]]></commentInRDBMS>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<engineerTo>
+<item key="BB23BA73-977C-D9F9-7ADA-38DD3C34C9EB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="loan_return_datetime" id="108E4ADF-8F3D-1641-6829-14DAFB6943A9">
+<createdBy>ryanhicks</createdBy>
+<createdTime>2024-09-15 04:50:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[The date and time when the book is returned from being loaned out.]]></commentInRDBMS>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<engineerTo>
+<item key="BB23BA73-977C-D9F9-7ADA-38DD3C34C9EB" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="borrower_no" id="46849986-32E9-B887-BBFC-95CA4B893770">
+<createdBy>ryanhicks</createdBy>
+<createdTime>2024-09-15 05:30:32 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique identifier of the borrower.]]></commentInRDBMS>
+<generatorID>CC40EA22-25E8-E63F-A7BA-EA5F8A7C6D56</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<engineerTo>
+<item key="BB23BA73-977C-D9F9-7ADA-38DD3C34C9EB" value="true"/>
+</engineerTo>
+<referedAttribute>657507F3-3A01-89CE-A4D8-19877B7B5962</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="book_copy_id" id="B289CEE6-8847-6F7B-DA61-2C0F09DED1C1">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-16 01:24:09 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique identifier of a book copy in a branch.]]></commentInRDBMS>
+<generatorID>D110615B-4877-013B-05D5-EB5DE34B921F</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<engineerTo>
+<item key="BB23BA73-977C-D9F9-7ADA-38DD3C34C9EB" value="true"/>
+</engineerTo>
+<referedAttribute>5CF44D04-4A8F-A225-0D2F-AEF80A1EA50B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="loan_due_back_date" id="3194DF67-4CED-73C9-4FFB-1D892D8DEA14">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-17 03:24:13 UTC</createdTime>
+<commentInRDBMS><![CDATA[Planned loan return date.]]></commentInRDBMS>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<engineerTo>
+<item key="BB23BA73-977C-D9F9-7ADA-38DD3C34C9EB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="branch_code" id="0717E2D6-7DA4-90D1-3714-0F9D7848F067">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-17 03:44:33 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique identifier of the LGA branch.]]></commentInRDBMS>
+<generatorID>D110615B-4877-013B-05D5-EB5DE34B921F</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<engineerTo>
+<item key="BB23BA73-977C-D9F9-7ADA-38DD3C34C9EB" value="true"/>
+</engineerTo>
+<referedAttribute>16F0DD81-0E80-3D0C-EB1C-B93D7F95F481</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="loan_fine_amnt" id="E4AC7CAC-66C6-B691-A328-BA9DE50011DC">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-17 04:36:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[Amount to fine borrower for a late book loan return.]]></commentInRDBMS>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<engineerTo>
+<item key="BB23BA73-977C-D9F9-7ADA-38DD3C34C9EB" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,4,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="loan_fine_paid_date" id="06069BDC-B4C1-A32B-824F-27F5D4E05067">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-17 04:36:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[The date borrower paid the late return fine.]]></commentInRDBMS>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<engineerTo>
+<item key="BB23BA73-977C-D9F9-7ADA-38DD3C34C9EB" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="4916112A-53B1-A044-FCD9-1F0E5B62C85F" name="LOAN PK">
+<createdBy>ryanhicks</createdBy>
+<createdTime>2024-09-15 04:49:22 UTC</createdTime>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="BB23BA73-977C-D9F9-7ADA-38DD3C34C9EB" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>EA01A6FA-C108-951D-3992-D2D5867038F6</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="04584A08-DC77-39FA-965E-C14C90BB51FA" name="LOAN_UQ">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-17 07:50:56 UTC</createdTime>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="BB23BA73-977C-D9F9-7ADA-38DD3C34C9EB" value="false"/>
+</engineerTo>
+<newElementsIDs>7EF75210-CB25-16E1-DFE1-4BE5EB78B21D,CC40EA22-25E8-E63F-A7BA-EA5F8A7C6D56,B289CEE6-8847-6F7B-DA61-2C0F09DED1C1</newElementsIDs>
+<usedAttributes>
+<attributeRef>7EF75210-CB25-16E1-DFE1-4BE5EB78B21D</attributeRef>
+<attributeRef>46849986-32E9-B887-BBFC-95CA4B893770</attributeRef>
+<attributeRef>B289CEE6-8847-6F7B-DA61-2C0F09DED1C1</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

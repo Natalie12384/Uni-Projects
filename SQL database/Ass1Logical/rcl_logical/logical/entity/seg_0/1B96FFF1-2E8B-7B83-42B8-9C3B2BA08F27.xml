@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="1B96FFF1-2E8B-7B83-42B8-9C3B2BA08F27" name="BORROWER_CLASS">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-16 01:39:44 UTC</createdTime>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<engineerTo>
+<item key="BB23BA73-977C-D9F9-7ADA-38DD3C34C9EB" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="class_id" id="5E67F121-1514-1D51-D128-2470AEABEA65">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-16 01:40:07 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique identifier of the borrower class.]]></commentInRDBMS>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<engineerTo>
+<item key="BB23BA73-977C-D9F9-7ADA-38DD3C34C9EB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="class_name" id="F0424A54-9342-AEC0-D9D4-565CEFD500D1">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-16 01:40:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[Name of the borrower class.]]></commentInRDBMS>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<engineerTo>
+<item key="BB23BA73-977C-D9F9-7ADA-38DD3C34C9EB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="class_std_loan_period" id="04D3F60F-95AD-3CD1-8A88-D6868B175856">
+<createdBy>danielsiahaan</createdBy>
+<createdTime>2024-09-17 22:44:36 UTC</createdTime>
+<commentInRDBMS><![CDATA[Standard number of days a book can be borrowed by a borrower in the class.]]></commentInRDBMS>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<engineerTo>
+<item key="BB23BA73-977C-D9F9-7ADA-38DD3C34C9EB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="class_max_books" id="0E44233F-780D-B792-2A19-CC5C215E57D9">
+<createdBy>danielsiahaan</createdBy>
+<createdTime>2024-09-17 23:07:22 UTC</createdTime>
+<commentInRDBMS><![CDATA[Maximum number of books can be borrowed at a time by a borrower in the class.]]></commentInRDBMS>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<engineerTo>
+<item key="BB23BA73-977C-D9F9-7ADA-38DD3C34C9EB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<ownDataTypeParameters>,1,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="AB9CD922-A7F4-A4D1-AD83-4A616F6C1C52" name="BORROWER_CLASS PK">
+<createdBy>natalie</createdBy>
+<createdTime>2024-09-16 01:40:39 UTC</createdTime>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="BB23BA73-977C-D9F9-7ADA-38DD3C34C9EB" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<newElementsIDs>5E67F121-1514-1D51-D128-2470AEABEA65</newElementsIDs>
+<usedAttributes>
+<attributeRef>5E67F121-1514-1D51-D128-2470AEABEA65</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

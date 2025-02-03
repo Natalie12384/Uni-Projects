@@ -1,0 +1,67 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="EA72D21E-9F15-2966-9458-19C86B3B11AD" name="CATALOGUE_AUTHOR">
+<createdBy>danielsiahaan</createdBy>
+<createdTime>2024-09-16 06:10:13 UTC</createdTime>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<engineerTo>
+<item key="BB23BA73-977C-D9F9-7ADA-38DD3C34C9EB" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="cat_call_no" id="E82C2707-FE76-AD2C-8039-F89CCC354FCC">
+<createdBy>danielsiahaan</createdBy>
+<createdTime>2024-09-16 06:15:13 UTC</createdTime>
+<commentInRDBMS><![CDATA[Call number of the catalogue that contains Dewey Decimal Classification.]]></commentInRDBMS>
+<generatorID>B5B8ED90-F554-7BA8-E109-5FB28D542065</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<engineerTo>
+<item key="BB23BA73-977C-D9F9-7ADA-38DD3C34C9EB" value="true"/>
+</engineerTo>
+<referedAttribute>EA5E48BD-1C24-D97F-3962-F1FC16AA36A9</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="author_id" id="9DA4E456-93EB-5B8A-7D0F-006CF2EAFB65">
+<createdBy>danielsiahaan</createdBy>
+<createdTime>2024-09-16 06:17:26 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique identifier of the author.]]></commentInRDBMS>
+<generatorID>22EA397C-DE3B-9FB3-D68C-87A40BC5E35F</generatorID>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<engineerTo>
+<item key="BB23BA73-977C-D9F9-7ADA-38DD3C34C9EB" value="true"/>
+</engineerTo>
+<referedAttribute>D774C398-1429-D1E3-A538-287E285239D0</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="83E5FD78-76B7-AC1D-18AB-50E5719ACFCB" name="CATALOGUE_AUTHOR PK">
+<createdBy>danielsiahaan</createdBy>
+<createdTime>2024-09-16 06:11:51 UTC</createdTime>
+<ownerDesignName>rcl_logical</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="BB23BA73-977C-D9F9-7ADA-38DD3C34C9EB" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>E82C2707-FE76-AD2C-8039-F89CCC354FCC</attributeRef>
+<attributeRef>9DA4E456-93EB-5B8A-7D0F-006CF2EAFB65</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
