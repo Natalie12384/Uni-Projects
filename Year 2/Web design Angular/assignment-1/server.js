@@ -1,0 +1,470 @@
+/**
+ * Backend Server
+ * @author Natalie Chan <ncha0086@student.monash.edu>
+ * @author YiZhou Huang <yhua0183@student.monash.edu
+ */
+
+/**
+ * express module.
+ * @requires express
+ */
+/**
+ * ejs module
+ * @requires ejs
+ */
+
+/**
+ * express instance
+ * @const
+ */
+const express = require("express"); //import and reference express library
+
+
+/**
+ * path module.
+ * @requires path
+ */
+/**
+ * path instance
+ * @const
+ */
+const path = require("path");//path library to simplify referencing directories
+
+
+/**
+ * morgan module.
+ * @requires morgan
+ */
+/**
+ * morgan instance
+ * @const
+ */
+const morgan = require("morgan");//library of middleware functions
+
+/**
+ * app instance
+ * @const
+ */
+const app = express();//simplifies routing of http requests
+
+/**
+ * ustilises the middleware function from Express to parse incoming payload.
+ * Used for utilising POST request incoming objets as strings or arrays
+ * @name use
+ * 
+ */
+app.use(express.urlencoded({extended: true}));
+
+/**
+ * Appliation uses inbuilt middleware function to serve css static files located in the 
+ * node module directory
+ * @name use
+ */
+app.use(express.static("node_modules/bootstrap/dist/css"));
+
+//load the files that are in the public directory
+/**
+ * Appliation uses inbuilt middleware function to serve static files located in the 
+ * public directory
+ * @name use
+ */
+app.use(express.static('public/media'))
+
+/**
+ * Uses inbuilt middleware function to deal with incoming JSON request objetcs 
+ * @name use 
+ */
+app.use(express.json());
+
+/** 
+ * Handles dynamic html pages. 
+ * Use the method res.render() when sending html 
+ * files to client
+ * @requires ejs
+*/
+app.engine('html', require('ejs').renderFile);
+
+/**
+ * assign setting name 'view engine' to 'html' value
+ * @name set 
+ */
+app.set('view engine', 'html');
+
+//constant variables for use
+/**
+ * Defines the general directory pathway to html files to serve
+ * @const
+ */
+const VIEWS_PATH = path.join(__dirname, "/views/");//directory path
+/**
+ * Defines the directory pathway to student 1's html files to serve
+ * @const
+ */
+const TASK1_PATH = "task1/";//Task 1 directory path
+/**
+ * Defines the directory pathway to student 2's html files to serve
+ * @const
+ */
+const TASK2_PATH = "task2/";//Task 2 directory path
+/**
+ * Defines local host port number to listen for user requests
+ * @const
+ */
+const PORT_NUMBER = 8081 //port number
+/**
+ * Defines short cut method to printing to terminal
+ * @const
+ */
+const print = console.log //short cut to use if u want
+
+
+/**
+ * Array database to store event objects
+ * @const
+ */
+const eventDB= [];
+/**
+ * Event module
+ * @const
+ * @require path to Event class
+ */
+const Event = require("./objects/event");
+
+/**
+ * Array database to store category objects
+ * @const
+ */
+const catDB = []; //Setting up the Category database
+const Category = require("./objects/category"); //initialize Category object
+const { existsSync } = require("fs");
+
+/**
+ * Configure port number
+ * @name listen
+ * @function
+ * @param {int} port - Express port number
+ * @param {function} callback - Express callback
+ */
+app.listen(PORT_NUMBER,function () {
+    print(`listening on port ${PORT_NUMBER}`);
+});
+
+/**
+ * Serves home page of web server
+ * @name get/ home page
+ * @function
+ * @param {string} path - express path
+ * @param {function} callback - express callback
+ */
+app.get('/', function (req, res) {
+    fileName = VIEWS_PATH + "index.html";
+    res.sendFile(fileName);
+});
+
+/* ###############################################
+BELOW includes all requests for CATEGORIES (or student 1 tasks)
+*/
+
+/**
+ * Task1.1 Add Category
+ * Get the user to the adding category page to enter the category details.
+ *
+ * @name get/ create new category from page
+ * @function
+ * @param {string} path - Express path
+ * @param {function} callback - Express callback
+ */
+app.get('/32444737/add-category', function (req, res) {
+  const fileName = VIEWS_PATH + TASK1_PATH + "addCategory.html";
+  res.render(fileName);
+});
+
+/**
+  * Posting the request to add the category.
+  *
+  * @name post/ create new category
+  * @function
+  * @param {string} path - Express path
+  * @param {function} callback - Express callback
+  */
+app.post('/32444737/addCategory-post',function (req, res){
+  let imagePath = "/eggman.jpg";
+
+  if (existsSync("./public/media" + req.body.imagePath) && !(req.body.imagePath == "")){
+      imagePath = req.body.imagePath;
+  }
+
+  //creating the new category based on the information provided
+  let newCategory = new Category(String(req.body.name), String(req.body.description), String(imagePath));
+
+  //push the data to the database
+  catDB.push(newCategory);
+
+  res.redirect('/32444737/events-categories');
+});
+
+/**
+  * Task1.2 List all category in tabular form.
+  *
+  * @name get/ list all category
+  * @function
+  * @param {string} path - Express path
+  * @param {function} callback - Express callback
+  */
+app.get('/32444737/events-categories', function (req, res) {
+  const fileName = VIEWS_PATH + TASK1_PATH + "listAllCategory.html";
+  res.render(fileName, { categories: catDB });
+});
+
+/**
+  * Task1.3 List categories by keyword.
+  *
+  * @name get/ list all the category based on the keyword
+  * @function
+  * @param {string} path - Express path
+  * @param {function} callback - Express callback
+  */
+app.get('/32444737/search-categories', function (req, res) {
+  /**
+   * Keyword to search for categories.
+   * @type {string}
+   */
+  let keyword = req.query.keyword;
+
+  /**
+   * Categories that match the keyword.
+   * @type {Array}
+   */
+  let matchingCategories = catDB.filter(category =>
+      category.description.toLowerCase().includes(keyword)
+  );
+
+  const fileName = VIEWS_PATH + TASK1_PATH + "categoriesByKeyword.html";
+  res.render(fileName, {
+      categories: matchingCategories,
+      key: keyword
+  });
+});
+
+/**
+  * Task1.4 Show event details by event id.
+  *
+  * @name get/ show the selected event
+  * @function
+  * @param {string} path - Express path
+  * @param {function} callback - Express callback
+  */
+app.get('/32444737/event/:id', function (req, res) {
+  /**
+   * Event ID to retrieve event details.
+   * @type {string}
+   */
+  let eventId = req.params.id;
+
+  for (let i = 0; i < eventDB.length; i++) {
+      if (eventDB[i].id === eventId) {
+          const fileName = VIEWS_PATH + TASK1_PATH + "viewEvent.html";
+          res.render(fileName, {
+              event: eventDB[i],
+              image: eventDB[i].image
+          });
+          return;
+      }
+  }
+  res.send('Event not found');
+});
+
+/**
+ * Task1.5 Delete Category by id
+ * Get the user to the page to enter the category id that the user wants to delete.
+ *
+ * @name get/ delete category page
+ * @function
+ * @param {string} path - Express path
+ * @param {function} callback - Express callback
+ */
+app.get('/32444737/delete-category', function(req, res) {
+  const fileName = VIEWS_PATH + TASK1_PATH + "deleteCategory.html";
+  res.render(fileName);
+});
+
+/**
+ * Post the request to delete category by its id.
+ *
+ * @name post/ delete the category
+ * @function
+ * @param {string} path - Express path
+ * @param {function} callback - Express callback
+ */
+app.post('/32444737/deleteCategory-post', function(req, res) {
+  /**
+   * Category ID to delete.
+   * @type {string}
+   */
+  let categoryId = req.body.id;
+
+  for (let i = 0; i < catDB.length; i++) {
+      if (catDB[i].id === categoryId) {
+          catDB.splice(i, 1);
+          return;
+      }
+  }
+  res.redirect('/32444737/events-categories');
+});
+
+
+
+/* ###############################################
+BELOW includes all requests for EVENTS (or student 2 tasks)
+*/
+/**
+ * Route serving the addEvent.html file, an "create event page" form
+ * @name get/ create new event form page
+ * @function
+ * @param {string} path - Express path
+ * @param {function} callback - Express callback
+ */
+app.get("/natalie/addEvent", function(req, res){
+    filename = VIEWS_PATH +TASK2_PATH+'addEvent.html';
+    res.sendFile(filename);
+});
+
+/**
+ * post request to take in user input for the creation of a new event in the server
+ * @name post/ create new event
+ * @function
+ * @param {string} path - Express path
+ * @param {function} callback - Express callback
+ */
+app.post("/natalie/addEvent", function(req, res){
+    const name = String(req.body.eventName);
+    const desc = String(req.body.eventDesc);
+    const startDate =new Date(req.body.eventStartDate);
+    const duration = Number(req.body.eventDuration);
+    const isActive = Boolean(req.body.eventIsActive);
+    const catID = String(req.body.catIdS);
+    let cap = req.body.eventCapacity;
+    //if there is no input for capacity
+    if (cap==""){
+      cap =1000;
+    }
+    //if tickets are greater than capacity
+    let ticket = req.body.eventTickets;
+    if (Number(ticket > cap)||ticket == ""){
+      ticket = cap;
+    }else{
+      ticket = Number(ticket);
+    }
+    //default image path if input is not valid or empty
+    let image = String(req.body.eventImage);
+    if (image == ""||!(existsSync("./public/media"+image))){
+      image = "/eggman.jpg";
+    }
+    //check if catID is valid in database to create new event
+    for (let c = 0; c<catDB.length; c++){
+      if(catDB[c].id == catID){
+        let newEvent = new Event(name,desc,startDate,isActive,cap,ticket, duration,image, catID);
+        eventDB.push(newEvent);
+      }
+    }
+    res.redirect("/natalie/listAllEvents");
+    });
+
+/**
+ * Route serving the page that lists all created events through listAllEvents.html file
+ * @name get/ view all events
+ * @function
+ * @param {String} path - express path
+ * @param {function} callback - express callback
+ */
+app.get("/natalie/listAllEvents", function(req,res){
+  fileName = VIEWS_PATH + TASK2_PATH + "listAllEvents.html";
+  res.render(fileName, { 
+    events: eventDB});
+});
+
+/**
+ * Route serving page that lists all events that have 0 tickets available for sale
+ * @name get/ list sold event page
+ * @function
+ * @param {String} path - express path
+ * @param {function} callback - express callback
+ */
+app.get("/natalie/listSoldEvents", function(req,res){
+  fileName = VIEWS_PATH + TASK2_PATH + "listSoldEvents.html";
+  res.render(fileName, { 
+    events: eventDB});
+});
+
+/**
+ * Route serving the delete event user form page
+ * @name get/ delete event page
+ * @function
+ * @param {String} path - express path
+ * @param {function} callback - express callback
+ */
+app.get('/natalie/deleteEvent', function(req, res){
+  fileName = VIEWS_PATH +TASK2_PATH + 'deleteEvent.html'
+  res.render(fileName);
+});
+
+/**
+ * Route serving page that lists all created event after successful deletion of chosen event based on ID value
+ * @name post/ delete event
+ * @function
+ * @param {String} path - express path
+ * @param {function} callback - express callback
+ */
+app.post("/natalie/deleteEvent", function(req,res){
+  const id = req.body.id;
+  let to_remove = -1
+  for(let i = 0; i<eventDB.length; i++){
+    if (id == eventDB[i].id){
+      to_remove = i;
+    }
+  }
+  if (to_remove != -1){
+    eventDB.splice(to_remove, 1)
+  } 
+  res.redirect('/natalie/listAllEvents')
+})
+
+// View category details via dynamic rendering of page
+/**
+ * Route serving the viewCat.html file to display properties of chosen category and related events.
+ * @name get/ view category page
+ * @function
+ * @param {String} path - express path
+ * @param {function} callback - express callback
+ */
+app.get("/natalie/category/:id", function(req,res){
+        let categoryId = req.params.id;
+        let cat = "";
+        let fileName = VIEWS_PATH + TASK2_PATH + "viewCat.html";
+        for (let i = 0; i<catDB.length;i++){
+          if(catDB[i].id==categoryId){
+            cat = catDB[i];
+          } 
+        }
+        res.render(fileName, 
+        { 
+          image: cat.imagePath,
+          catId: categoryId,
+          name: cat.name,
+          desc: cat.desc,
+          creationD: cat.createdAt,
+          events: eventDB
+        });
+         
+    });
+
+    /**
+     * serves the 404 error page if it is an invalid route or endpoint
+     * @name get/ 404 page
+     * @function
+     * @param {String} path - Express path
+     * @param {function} callback - Express callback
+     */
+    app.get("*", function (req, res) {
+      res.render("404");
+    });

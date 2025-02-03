@@ -1,0 +1,141 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View All Sold Out Events</title>
+    <link href="/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body>
+    <!--Header for page-->
+        <div class="header" >
+            <img src = "/logo.png" id = "logo">            
+            <!--Creates a dropdown navigation menu based on either category or event-->
+            <div class="dropdown">
+                <a class="btn btn-primary mb-3 w3-show-inline-block" href="/">Home</a>
+                <!--drop down for category related pages-->
+                <button class="btn btn-primary mb-3 dropdown-toggle w3-show-inline-block" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Categories
+                </button>
+                    <ul class="dropdown-menu"aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="/32444737/add-category">Add Category</a></li>
+                        <li><a class="dropdown-item" href="/32444737/events-categories">View Categories</a></li>
+                        <li><a class="dropdown-item" href="/32444737/delete-category">Delete Category</a></li>
+                    </ul>
+                
+                <!--drop down for event related pages-->
+                <button class="btn btn-primary mb-3 dropdown-toggle w3-show-inline-block" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Events
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/natalie/listAllEvents">View All Events</a></li>
+                    <li><a class="dropdown-item" href="/natalie/listSoldEvents">View Sold out Events</a></li>
+                    <li><a class="dropdown-item" href="/natalie/addEvent">Add Event</a></li>
+                    <li><a class="dropdown-item"href="/natalie/deleteEvent">Delete Event</a></li>
+                </ul>
+             </div>
+        </div>
+    <main class="container">
+        <main class = "album py-5">
+            <!--events table section title-->
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    <div class="table-responsive album py-5">
+                        <h3 class="my-2 text-center"><b>View All Sold Out Events</b></h3>
+                        <!-- table is bordered and white coloured-->
+                        <table class = "mt-3 table table-bordered table-light">
+                            <thead>
+                                <!--Table coloumn names-->
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Start</th>
+                                    <th>End</th>
+                                    <th>Duration</th>
+                                    <th>isActive</th>
+                                    <th>Capacity</th>
+                                    <th>Tickets Available</th>
+                                    <th>Category ID</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <!--table rows-->
+                            <tbody>
+                                <% for (let i = 0; i < events.length; i++) { %>
+                                    <% if(events[i].ticketsAvailable == 0) { %>
+                                    <tr>
+                                        <td><%= events[i].id %></td>
+                                        <td><%= events[i].name %></td>
+                                        <td><%= `${events[i].startDate.getDate()}/${events[i].startDate.getMonth()}/${events[i].startDate.getYear()+1900}, ${events[i].startDate.getHours()>12?events[i].startDate.getHours()-12:events[i].startDate.getHours()}:${events[i].startDate.getMinutes()}:00 ${events[i].startDate.getHours()>12?"PM":"AM"}` %></td>
+                                        <td><%= events[i].endDate %></td>
+                                        <td><%= `${events[i].duration>60? `${Math.floor(events[i].duration/60)} hour(s) ${events[i].duration%60} minute(s)`:`${events[i].duration} minute(s)`}` %></td>
+                                        <td><%= `${events[i].isActive?"Active":"not Active"}` %></td>
+                                        <td><%= events[i].capacity %></td>
+                                        <td><%= events[i].ticketsAvailable %></td>
+                                        <td><%= events[i].catId %></td>
+                                        <td>
+                                            <a type = "button" class = "btn btn-primary mb-3" id = "<%= events[i].id %>" onclick = "makeLink(id);" > view</a>
+                                        </td>
+                                    </tr>
+                                    <% } %>
+                                <% } %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </main>
+</body>
+<!--view button code-->
+<script type = "text/javascript">
+    /**
+    * Adds a parametrized link in the href attribute of the link button assigned 
+    * to the event in the same row.
+    * @param {string} id - the ID value of an specified event
+    */
+   function makeLink(id){
+   location.href = "/32444737/event/" + id ; 
+   }
+</script>
+<!--css code-->
+<style>
+
+    .header{  
+        padding: 30px;
+        text-align: center;
+        background: #f97705;
+        color: white;
+        font-size: 30px;
+    }
+    #logo{
+        width:165px;
+        height: 125px;
+        padding-bottom: 20px;
+    }
+    h1{
+        padding:10px;
+        font-size: 40px;
+        
+    }
+    h2{
+        padding-top:40px;
+        font:200;
+        text-align: center;
+    }
+
+    body{
+        background-color: rgb(232, 228, 223);
+        }
+    input{
+        width: 40px;
+    }
+    button{
+        color: #255fff;
+    }
+        
+</style>
+</html>
