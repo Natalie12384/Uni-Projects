@@ -14,3 +14,8 @@ All university projects and assignments since 2022.
 - Web Design Angular
     Event managing website built using the angular framework and mongoDB as part of full stack development
     
+# Year 3
+- SQL
+Full process of developing an Trip database from conceptual, logical and final implementation
+- Algorithms
+    Working implementation of the ford fulkerson algorithm, based on optimising activity allocation by people and activity preferences.
